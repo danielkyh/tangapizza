@@ -5,11 +5,16 @@ app.config(function ($routeProvider){ $routeProvider
 		controller: 'MainController',
 		templateUrl: '../components/menu.html'
 	})
-	.when('/build',{
+	.when('/pizza',{
 		controller: 'BuildController',
-		templateUrl: '../components/builder.html'
+		templateUrl: '../components/pizzabuilder.html'
+	})
+	.when('/topping',{
+		controller: 'BuildController',
+		templateUrl: '../components/toppingbuilder.html'
 	})
 	.otherwise({
 		redirectTo: '/'
 	})
 })
+
