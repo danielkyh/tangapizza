@@ -1,20 +1,24 @@
-app.controller('MainController', ['$scope', '$http', function($scope, $http){
+app.controller('MainController', ['$scope', '$http', 'getPizza', function($scope, $http, getPizza){
 
 	// dummy data
-	$scope.pizzas = ['Igor', 'Misko', 'Vojta']
 	$scope.toppings = ['Pep', 'Mush', 'Saus']
 
 	//request pizzas
 
-	$http({
-		method: 'GET',
-		url: 'http://localhost:3000/pizzas'
-	})
+	// $http({
+	// 	method: 'GET',
+	// 	url: 'http://localhost:3000/pizzas'
+	// })
 
-	.success(function(res){
-		$scope.pizzas = res
-		console.log($scope.pizzas)
+	// .success(function(res){
+	// 	$scope.pizzas = res
+	// 	console.log($scope.pizzas)
+	// })
+	getPizza.success(function(data){
+		$scope.pizzas = data
 	})
+	// $scope.pizzas = getPizza.success
+	console.log($scope.pizzas)
 
 	//request toppings
 	$http({
