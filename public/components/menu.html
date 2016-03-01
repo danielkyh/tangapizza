@@ -1,0 +1,32 @@
+<h3>Pizzas:</h3>
+
+<table class="highlight">
+    <thead>
+        <tr>
+            <th data-field="id">Name</th>
+            <th data-field="name">Description</th>
+            <th data-field="price">Toppings</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="pizza in pizzas">
+            <td>{{pizza}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Available Toppings:</h3>
+
+<table class="highlight">
+    <thead>
+        <tr>
+            <th data-field="id">Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="topping in toppings">
+            <td>{{topping}}</td>
+        </tr>
+    </tbody>
+</table>
