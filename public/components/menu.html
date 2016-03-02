@@ -1,0 +1,34 @@
+<div class="section">
+    <h3 class="title">Pizzas:</h3>
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th data-field="id" class="center-align">Name</th>
+                <th data-field="name" class="center-align">Description</th>
+                <th data-field="name" class="center-align">Toppings</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="pizza in pizzas">
+                <td class="center-align">{{pizza.name}}</td>
+                <td class="center-align">{{pizza.description}}</td>
+                <td class="center-align" id="pizza{{pizza.id}}"><span ng-click="showTopping(pizza.id)" class="btn waves-effect waves-light show-topping">Show Toppings</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="section">
+    <h3 class="title">Available Toppings:</h3>
+    <table class="highlight">
+        <thead>
+            <tr>
+                <th data-field="id">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="topping in toppings">
+                <td>{{topping.name}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

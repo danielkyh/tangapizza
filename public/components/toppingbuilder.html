@@ -1,0 +1,19 @@
+<div class="section">
+	<div class="row">
+		<h3 class="title">Add a Topping</h3>
+	</div>
+
+
+	<div class="row">
+	    <form class="col s12">
+	        <div class="row">
+	            <div class="input-field col s12">
+	                <input ng-model="newTopp" id="topping" type="text" class="validate">
+	                <label for="topping">Topping Name</label>
+	            </div>
+	        </div>
+	        <button ng-show="newTopp" ng-click="addTopping()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+	        </button>
+	    </form>
+	</div>
+</div>
