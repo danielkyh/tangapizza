@@ -2,3 +2,55 @@
 select {
 	display: block;
 }
+
+html{
+	font-family: 'Open Sans', sans-serif;
+	color: #212121;
+}
+
+.site-title{
+	font-weight: 900;
+	color: #455a64;
+}
+
+.tabs{
+	font-weight: 500;
+	display: block;
+	font-size: 1.2em;
+	padding-top: 10px;
+}
+
+.tabs:hover{
+	background-color: #ffca28 !important;
+	color: white;
+}
+
+a:visited{
+	color: black;
+}
+
+.title{
+	font-weight: 700;
+	color: #455a64;
+}
+
+.contact-btn{
+	position: fixed;
+	bottom: 45px;
+	right: 24px;
+}
+
+.contact-link:visited{
+	color: #ef5350;
+}
+
+.contact-link{
+	font-weight: 100;
+	color: #ef5350;
+	float: right;
+	padding: 10px;
+}
+
+.contact-link:hover{
+	color: #bdbdbd;
+}
