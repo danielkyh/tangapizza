@@ -14,7 +14,7 @@
                     <label for="description">Description</label>
                 </div>
             </div>
-            <button ng-click="addPizza()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+            <button ng-show="pizzName" ng-click="addPizza()" class="btn waves-effect waves-light" type="submit" name="action">Submit
             </button>
         </form>
     </div>
@@ -39,5 +39,5 @@
     </div>
 
 
-    <button ng-click="addPizzaTopping()" class="btn waves-effect waves-light" type="submit" name="add">Add Topping!</button>
+    <button ng-show="currTopp && currPizza " ng-click="addPizzaTopping()" class="btn waves-effect waves-light" type="submit" name="add">Add Topping!</button>
 </div>

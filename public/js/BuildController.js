@@ -23,6 +23,8 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 	$scope.newTopp = ""
 //--------------------------------------------------
 
+
+
 	//pizza builder 
 	$scope.addPizza = function(){
 
