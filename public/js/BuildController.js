@@ -33,11 +33,13 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 		})
 		//redirect to full list on success
 		.success(function(res){
-			$window.location.href = "/#/"
+			// Materialize.toast(message, displayLength, className, completeCallback);
+			  Materialize.toast('Successfully added pizza!', 1500, 'light-blue darken-1') // 4000 is the duration of the toast
 		})	
 
 		.error(function(res){
-			console.log("failed!!!")
+			// Materialize.toast(message, displayLength, className, completeCallback);
+			  Materialize.toast('Opps! Looks like there was an error', 1500, 'deep-orange lighten-2') // 4000 is the duration of the toast
 		})
 	}
 
@@ -56,13 +58,13 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 		})
 
 		.success(function(res){
-			console.log(res)
-			$window.location.href = "/#/"
+			// Materialize.toast(message, displayLength, className, completeCallback);
+			  Materialize.toast('Successfully added topping to pizza!', 1500, 'light-blue darken-1') // 4000 is the duration of the toast
 		})
 
 		.error(function(res){
-			console.log(res)
-			console.log("failed!!!")
+			// Materialize.toast(message, displayLength, className, completeCallback);
+			  Materialize.toast('Opps! Looks like there was an error', 1500, 'deep-orange lighten-2') // 4000 is the duration of the toast
 		})
 	}
 //--------------------------------------------------
