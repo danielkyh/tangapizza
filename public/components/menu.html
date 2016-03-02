@@ -5,13 +5,13 @@
         <tr>
             <th data-field="id">Name</th>
             <th data-field="name">Description</th>
-            <th data-field="price">Toppings</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="pizza in pizzas">
             <td>{{pizza.name}}</td>
             <td>{{pizza.description}}</td>
+            <td id="pizza{{pizza.id}}"><span  ng-click="showTopping(pizza.id)" class="btn waves-effect waves-light show-topping">Show Toppings</span></td>
         </tr>
     </tbody>
 </table>
@@ -27,7 +27,7 @@
     </thead>
     <tbody>
         <tr ng-repeat="topping in toppings">
-            <td>{{topping}}</td>
+            <td>{{topping.name}}</td>
         </tr>
     </tbody>
 </table>
