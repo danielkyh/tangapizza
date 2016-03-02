@@ -1,5 +1,5 @@
 app.factory('getTopping', ['$http', function($http) {
-	return $http.get('http://localhost:3000/toppings')
+	return $http.get('https://pizzaserver.herokuapp.com/toppings')
         .success(function(data) {
         	return data
         })

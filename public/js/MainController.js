@@ -15,7 +15,7 @@ app.controller('MainController', ['$scope', '$http', 'getPizza', 'getTopping', f
 
 		$http({
 			method: 'GET',
-			url: 'http://localhost:3000/pizzas/' + id + '/toppings'
+			url: 'https://pizzaserver.herokuapp.com/pizzas/' + id + '/toppings'
 		})
 
 		.success(function(data){

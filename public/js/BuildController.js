@@ -29,7 +29,7 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 	$scope.addPizza = function(){
 
 		$http({
-			url: 'http://localhost:3000/pizzas',
+			url: 'https://pizzaserver.herokuapp.com/pizzas',
 			method: 'POST',
 			data: {pizza: {name: $scope.pizzName, description: $scope.pizzDesc}}
 		})
@@ -54,7 +54,7 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 	$scope.addPizzaTopping = function(){
 
 		$http({
-			url: 'http://localhost:3000/pizzas/' + $scope.currPizza + '/toppings',
+			url: 'https://pizzaserver.herokuapp.com/pizzas/' + $scope.currPizza + '/toppings',
 			method: 'POST',
 			data: {pizza_id: $scope.currPizza, topping_id: $scope.currTopp}
 		})
@@ -73,7 +73,7 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 	// post request for new topping by user
 	$scope.addTopping = function(){
 		$http({
-			url: 'http://localhost:3000/toppings',
+			url: 'https://pizzaserver.herokuapp.com/toppings',
 			method: 'POST',
 			data: {topping: {name: $scope.newTopp}}
 		})
