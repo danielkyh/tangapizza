@@ -1,17 +1,15 @@
-app.controller('MainController', ['$scope', '$http', 'getPizza', 'getTopping', function($scope, $http, getPizza, getTopping){
+app.controller('MainController', ['$scope', '$http', 'getPizza', 'getTopping', '$rootScope', function($scope, $http, getPizza, getTopping, $rootScope){
 
 	//request pizzas
 	getPizza.success(function(data){
-		$scope.pizzas = data
+		$rootScope.pizzas = data
 	})
 
 	//request toppings
 	getTopping.success(function(data){
-		$scope.toppings = data
+		$rootScope.toppings = data
 	})
-	console.log('welcome back')
 	$scope.showTopping = function(id){
-		console.log($('#pizza'+id))
 
 		$http({
 			method: 'GET',
