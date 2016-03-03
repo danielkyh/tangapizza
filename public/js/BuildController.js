@@ -1,17 +1,14 @@
-app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'getPizza', 'getTopping', function($scope, $http, $window, $location, getPizza, getTopping){
+app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'getPizza', 'getTopping', '$rootScope', function($scope, $http, $window, $location, getPizza, getTopping, $rootScope){
 
 	//request pizzas
 	getPizza.success(function(data){
-		$scope.pizzas = data
-	console.log($scope.pizzas)
+		$rootScope.pizzas = data
 	})
 
 	//request toppings
 	getTopping.success(function(data){
-		$scope.toppings = data
-	console.log($scope.toppings)
+		$rootScope.toppings = data
 	})
-
 
 
 
@@ -37,6 +34,8 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 		.success(function(res){
 			// Materialize.toast(message, displayLength, className, completeCallback);
 			  Materialize.toast('Successfully added pizza!', 1500, 'light-blue darken-1') // 4000 is the duration of the toast
+			// Push new created pizza to array
+			  $rootScope.pizzas.push(res)
 		})	
 
 		.error(function(res){
@@ -50,7 +49,7 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 //--------------------------------------------------
 
 	
-	// declare function to post to pizza toppings
+	// add topping to existing pizza
 	$scope.addPizzaTopping = function(){
 
 		$http({
@@ -80,7 +79,9 @@ app.controller('BuildController', ['$scope', '$http', '$window', '$location', 'g
 
 		.success(function(res){
 			// Materialize.toast(message, displayLength, className, completeCallback);
-			  Materialize.toast('Successfully added newtopping!', 1500, 'light-blue darken-1') // 4000 is the duration of the toast
+			  Materialize.toast('Successfully added new topping!', 1500, 'light-blue darken-1') // 4000 is the duration of the toast
+			  // push new item to exisitng array
+			  $rootScope.toppings.push(res)
 		})
 
 		.error(function(res){
